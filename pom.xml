@@ -9,7 +9,6 @@
 
   <modules>
     <module>test</module>
-    <module>overrides</module>
   </modules>
 
   <properties>
@@ -22,7 +21,7 @@
     <maven.compiler.target>1.7</maven.compiler.target>
 
     <!-- Dependency Versions -->
-    <no.content.version>99.99-no-content</no.content.version>
+    <no.content.version>99-empty</no.content.version>
     <slf4j.version>1.7.6</slf4j.version>
     <logback.version>1.1.1</logback.version>
 
@@ -170,4 +169,13 @@
       <url>file://${project.build.directory}/mvn-repo</url>
     </repository>
   </distributionManagement>
+  
+  <repositories>
+    <repository>
+      <id>version99</id>
+      <!-- highly available repository serving empty artifacts -->
+      <url>http://version99.qos.ch/</url>
+    </repository>
+  </repositories>
+
 </project>
