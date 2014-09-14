@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>net.thoughtmerge</groupId>
-  <artifactId>thoughtmerge-root</artifactId>
+  <groupId>net.thoughtmerge.test</groupId>
+  <artifactId>test-parent</artifactId>
   <versioning>
     <versions>
       <version>0.1-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20140914092531</lastUpdated>
+    <lastUpdated>20140914092534</lastUpdated>
   </versioning>
 </metadata>
