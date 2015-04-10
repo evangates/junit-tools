@@ -8,14 +8,19 @@
 
 package net.thoughtmerge.test.junit;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  *
  * @author evan.gates
  */
-public class TestNamePrinter extends TestNameOutputter {
+public class TestNameLogger extends TestNameOutputter {
+
+  private static final Logger logger = LoggerFactory.getLogger(TestNameLogger.class);
 
   @Override
   protected void output(String message) {
-    System.out.println(message);
+    logger.debug(message);
   }
 }
