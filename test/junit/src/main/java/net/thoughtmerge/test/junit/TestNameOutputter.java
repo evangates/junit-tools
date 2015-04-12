@@ -18,25 +18,29 @@ import org.junit.runner.Description;
 public abstract class TestNameOutputter extends TestWatcher {
 
   @Override
+  protected void starting(Description description) {
+    final String label = description.getMethodName();
+    final String message = startingMessage(label);
+    final String hyphens = hyphens(message.length());
+
+    output(hyphens);
+    output(message);
+    output(hyphens);
+
+    super.starting(description);
+  }
+
+  @Override
   protected void finished(Description description) {
     super.finished(description);
 
     final String label = description.getMethodName();
     final String message = finishedMessage(label);
+    final String hyphens = hyphens(message.length());
 
+    output(hyphens);
     output(message);
-    output(String.format("%s%n", hyphens(message.length())));
-  }
-
-  @Override
-  protected void starting(Description description) {
-    final String label = description.getMethodName();
-    final String message = startingMessage(label);
-
-    output(hyphens(message.length()));
-    output(message);
-
-    super.starting(description);
+    output(String.format("%s%n", hyphens));
   }
 
   protected abstract void output(String message);
