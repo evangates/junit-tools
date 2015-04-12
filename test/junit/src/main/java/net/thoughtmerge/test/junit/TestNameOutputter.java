@@ -52,6 +52,6 @@ public abstract class TestNameOutputter extends TestWatcher {
   }
 
   private String finishedMessage(String label) {
-    return String.format("FINISHED: %s", label);
+    return String.format("FINISHED: %s%n", label);
   }
 }
