@@ -25,7 +25,7 @@ public abstract class TestNameOutputter extends TestWatcher {
     final String message = finishedMessage(label);
 
     output(message);
-    output(hyphens(message.length()));
+    output(String.format("%s%n", hyphens(message.length())));
   }
 
   @Override
@@ -52,6 +52,6 @@ public abstract class TestNameOutputter extends TestWatcher {
   }
 
   private String finishedMessage(String label) {
-    return String.format("FINISHED: %s%n", label);
+    return String.format("FINISHED: %s", label);
   }
 }
