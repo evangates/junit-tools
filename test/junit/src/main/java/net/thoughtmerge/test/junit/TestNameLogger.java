@@ -17,7 +17,15 @@ import org.slf4j.LoggerFactory;
  */
 public class TestNameLogger extends TestNameOutputter {
 
-  private static final Logger logger = LoggerFactory.getLogger(TestNameLogger.class);
+  private final Logger logger;
+
+  public TestNameLogger() {
+    this(LoggerFactory.getLogger(TestNameLogger.class));
+  }
+
+  public TestNameLogger(Logger logger) {
+    this.logger = logger;
+  }
 
   @Override
   protected void output(String message) {
