@@ -9,7 +9,6 @@
 
   <groupId>net.thoughtmerge.test</groupId>
   <artifactId>junit</artifactId>
-  <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <dependencies>
