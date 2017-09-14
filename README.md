@@ -1,4 +1,4 @@
-thoughtmerge
+JUnit Utilities
 ============
 
-personal libraries
+Stuff used when dealing with JUnit
